@@ -17,11 +17,11 @@
 
     <%= yield %>
     <% if current_user %>
-    <p id='signedIn'>Signed in as <%= current_user.name %>!
-    <%= link_to "Sign out", signout_path %></p>
+    <p id='signedIn'>Signed in as <%= current_user.name %>!</p>
+    <%= link_to "Sign out", signout_path %>
     <% else %>
     <center>
-    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+    <button><%= link_to "Sign in with Twitter", "/auth/twitter" %></button>
     </center>
     <% end %>
     <%= javascript_include_tag "application" %>
