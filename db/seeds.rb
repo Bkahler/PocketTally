@@ -1,0 +1,7 @@
+Transaction.create!(total: 3, user_id: 1)
+Transaction.create!(total: 5, user_id: 1)
+Transaction.create!(total: 1, user_id: 1)
+Transaction.create!(total: 20, user_id: 1)
+Transaction.create!(total: 10, user_id: 1)
+Transaction.create!(total: 5, user_id: 1)
+Transaction.create!(total: 1, user_id: 1)

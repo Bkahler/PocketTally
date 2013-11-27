@@ -1,0 +1,44 @@
+<center>
+<h4></h4>
+<ul class="small-block-grid-2 ">
+  <li>
+    <form id="one">
+      <input type= "hidden" name="one" id="one">
+      <input class= "button large" type= "submit" value="$1">
+    </form>
+  </li>
+  <li>
+    <form id="five">
+      <input type= "hidden" name="five" id="five">
+      <input class= "button large" type="submit" value="$5">
+    </form>
+  </li>
+  <li>
+  <form id="ten">
+    <input type= "hidden" name="ten" id="ten">
+    <input class= "button large" type= "submit" value="$10">
+  </form>
+  </li>
+  <li>
+  <form id="twenty">
+    <input type= "hidden" name="twenty" id="twenty">
+    <input class= "button large" type= "submit" value="$20">
+  </form>
+  </li>
+</ul>
+</center>
+<h3 id="tally"> Today's Tally</h3>
+<% total = [0] %>
+  <% for transaction in @transactions.models: %>
+    <%total.push(transaction.get('total'))%>
+  <%end%>
+
+
+<h3 id ='sum'>$<%= total.reduce (t,s) -> t + s %> </h3>
+
+<form id="reset">
+  <input type="hidden" name="reset" id="reset">
+  <input  id="resetButton" class="button alert"type= "submit" value="reset">
+</form>
+
+
